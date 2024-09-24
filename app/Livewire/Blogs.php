@@ -4,20 +4,21 @@ namespace App\Livewire;
 
 use App\Models\Blog;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('layouts.app')]
-class Home extends Component
+#[Title('My Blogs')]
+class Blogs extends Component
 {
-
     public function with(){
         return [
-            'blogs' => Blog::all()->take(2)
+            'blogs' => Blog::all()
         ];
     }
 
     public function render()
     {
-        return view('livewire.home', $this->with());
+        return view('livewire.blogs', $this->with());
     }
 }

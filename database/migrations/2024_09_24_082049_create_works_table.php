@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('as');
             $table->string('company');
             $table->string('period');
-            $table->string('image');
+            $table->string('link');
         });
     }
 

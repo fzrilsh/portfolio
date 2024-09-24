@@ -2,7 +2,8 @@
     <section class="mt-10 max-w-2xl mx-auto px-6">
         <h1 class="font-bold text-3xl mb-1">Fazril Syaveral Hillaby</h1>
         <p class="opacity-60 mb-10">Student &amp; Web Developer</p>
-        <div class="flex flex-col min-[520px]:flex-row gap-6 mb-8"> <img src="https://media.licdn.com/dms/image/v2/D5603AQFId_7gd_ua0A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1714835080375?e=1732752000&v=beta&t=4chwEUAhf6Eb36sHtBbtWpZZ8GvuA6zQC4SAf3MhpLM" alt="Fazril Syaveral Hillaby" class="rounded-full" width="100" height="100" loading="lazy" decoding="async">
+        <div class="flex flex-row gap-6 mb-8">
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQFId_7gd_ua0A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1714835080375?e=1732752000&v=beta&t=4chwEUAhf6Eb36sHtBbtWpZZ8GvuA6zQC4SAf3MhpLM" alt="Fazril Syaveral Hillaby" class="rounded-full" width="100" height="100" loading="lazy" decoding="async">
             <div class="group flex flex-col justify-center gap-2 w-fit"> 
                 <a href="https://github.com/fzrilsh" class="flex items-center gap-3 opacity-60 group-hover:opacity-30 hover:!opacity-60 transition-opacity" target="_blank">
                     <svg width="25" height="25" class="text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">
@@ -20,6 +21,12 @@
                     </svg>
                     <div>
                         <p>Linkedin</p>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/fzrilsh_" class="flex items-center gap-3 opacity-60 group-hover:opacity-30 hover:!opacity-60 transition-opacity" target="_self">
+                    <svg width="25" height="25" class="text-black" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="4" width="16" height="16" rx="4" />  <circle cx="12" cy="12" r="3" />  <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" /></svg>
+                    <div>
+                        <p>Instagram</p>
                     </div>
                 </a>
             </div>
@@ -46,19 +53,23 @@
             </a>
         </div>
     </section>
+    @if ($blogs->count())
     <section class="mt-20 max-w-2xl mx-auto px-6">
         <h2 class="mb-8">Latest Posts</h2>
         <div class="grid grid-cols-1 gap-10 sm:gap-6 mb-10">
-            <a href="/blog/test-2" class=" sm:flex sm:flex-row-reverse sm:justify-between sm:gap-6 post">
-                <img src="{{ asset('images/dummy-blog.jpg') }}" alt="dummy image" class="rounded-lg w-[100px] h-[100px] object-cover" loading="lazy" decoding="async">
+            @foreach ($blogs as $blog)
+            <a href="/blogs/{{ $blog->slug }}" class=" sm:flex sm:flex-row-reverse sm:justify-between sm:gap-6 post">
+                <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" class="rounded-lg w-[100px] h-[100px] object-cover" loading="lazy" decoding="async">
                 <div class="mt-4 sm:my-auto">
-                    <p class="opacity-60 mb-2"> 00/00/2024 </p>
-                    <h3 class="font-medium hover-underline">Dummy Blog 1</h3>
+                    <p class="opacity-60 mb-2"> {{ date('d/m/Y', strtotime($blog->created_at)) }} </p>
+                    <h3 class="font-medium hover-underline">{{ $blog->title }}</h3>
                 </div>
             </a>
+            @endforeach
         </div>
         <div class="text-center"> 
-            <a href="/blog" class="underline underline-offset-4 opacity-60 hover:opacity-100 transition-opacity">View all</a>
+            <a href="/blogs" class="underline underline-offset-4 opacity-60 hover:opacity-100 transition-opacity">View all</a>
         </div>
     </section>
+    @endif
 </main>

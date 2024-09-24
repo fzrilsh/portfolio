@@ -2,25 +2,23 @@
 
 namespace App\Livewire;
 
-use App\Models\Achivement;
-use App\Models\Work;
+use App\Models\Project as ModelsProject;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('layouts.app')]
-#[Title('About Myself')]
-class About extends Component
+#[Title('My Projects')]
+class Project extends Component
 {
     public function with(){
         return [
-            'achivements' => Achivement::all(),
-            'works' => Work::all()
+            'projects' => ModelsProject::all()
         ];
     }
 
     public function render()
     {
-        return view('livewire.about', $this->with());
+        return view('livewire.project', $this->with());
     }
 }
