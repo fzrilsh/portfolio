@@ -17,7 +17,7 @@
                 @foreach ($achivements as $achivement)
                 <a href="{{ $achivement->link }}" class="py-3 flex items-center justify-between group-hover:opacity-60 hover:!opacity-100 transition-opacity">
                     <div class="flex items-center gap-4">
-                        <img src="{{ asset('storage/' . $achivement->image) }}" alt="{{ $achivement->title }}" class="rounded-md w-[160px] h-[100px] object-cover" width="40" height="40" loading="lazy" decoding="async">
+                        <img src="{{ asset('public/storage/' . $achivement->image) }}" alt="{{ $achivement->title }}" class="rounded-md w-[160px] h-[100px] object-cover" width="40" height="40" loading="lazy" decoding="async">
                         <div>
                             <h3 class="font-medium">{{ $achivement->title }}</h3>
                             <p class="text-sm opacity-60">{{ $achivement->description }}</p>

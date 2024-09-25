@@ -8,7 +8,7 @@ new class extends Component
     
 }; ?>
 
-<div class="px-6 py-6 max-w-2xl mx-auto flex items-center justify-between"> <a href="/"> <img src="{{ asset('images/logo.png') }}" alt="Logo" class="w-[50px] h-[50px] object-cover" width="50" height="50" loading="lazy" decoding="async"> </a>
+<div class="px-6 py-6 max-w-2xl mx-auto flex items-center justify-between"> <a href="/"> <img src="{{ asset('public/images/logo.png') }}" alt="Logo" class="w-[50px] h-[50px] object-cover" width="50" height="50" loading="lazy" decoding="async"> </a>
     <nav class="ml-auto mr-6 sm:m-0">
         <ul class="hidden sm:flex sm:items-center sm:gap-2">
             <li> <a class="group px-4 py-2 rounded-lg {{ request()->routeIs('home') ? 'bg-gray-bg opacity-100' : 'opacity-60' }} hover:bg-gray-bg hover:opacity-100 transition-all" href="/"> Home </a> </li>
