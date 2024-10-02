@@ -24,15 +24,21 @@
 </head>
 
 <body>
-    <header>
-        <livewire:layout.navbar />
-    </header>
+    <div class="min-h-screen flex flex-row flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
+        <div class="min-h-screen flex flex-row flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
+            <header>
+                <livewire:layout.admin.navbar />
+            </header>
 
-    {{ $slot }}
+            <div class="ml-72 mt-10 w-2/3">
+                {{ $slot }}
+            </div>
+        </div>
+    </div>
 
     <footer></footer>
-    @livewireScripts
     @stack('scripts')
+    @livewireScripts
 </body>
 
 </html>

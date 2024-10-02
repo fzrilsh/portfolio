@@ -17,6 +17,7 @@ class BlogSeeder extends Seeder
             'slug' => 'dummy-blog-1',
             'title' => 'Dummy Blog 1',
             'content' => 'Lorem ipsum dolor sit amet',
+            'status' => 'publish',
             'image' => 'blogs/dummy-blog-1.jpg'
         ]);
     }

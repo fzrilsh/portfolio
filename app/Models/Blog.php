@@ -9,6 +9,12 @@ class Blog extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'slug',
+        'title',
+        'image',
+        'content',
+        'status'
+    ];
     public $timestamps = true;
 }

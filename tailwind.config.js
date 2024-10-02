@@ -1,17 +1,32 @@
-import forms from '@tailwindcss/forms';
+const defaultTheme = require('tailwindcss/defaultTheme')
 
-/** @type {import('tailwindcss').Config} */
-export default {
-  presets: [
-    require('./vendor/tallstackui/tallstackui/tailwind.config.js')
-  ],
-  content: [
-    "./resources/**/*.blade.php",
-    "./resources/**/*.js",
-    './vendor/tallstackui/tallstackui/src/**/*.php',
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [forms]
+module.exports = {
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+            },
+        },
+    },
+    variants: {
+        extend: {
+            backgroundColor: ['active'],
+        }
+    },
+    content: [
+        './app/**/*.php',
+        './resources/**/*.html',
+        './resources/**/*.js',
+        './resources/**/*.jsx',
+        './resources/**/*.ts',
+        './resources/**/*.tsx',
+        './resources/**/*.php',
+        './resources/**/*.vue',
+        './resources/**/*.twig',
+        './vendor/tallstackui/tallstackui/src/**/*.php', 
+    ],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+    ],
 }

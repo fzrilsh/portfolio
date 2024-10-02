@@ -12,7 +12,7 @@ class Home extends Component
 
     public function with(){
         return [
-            'blogs' => Blog::all()->take(2)
+            'blogs' => Blog::query()->where('status', 'publish')->get()->take(3)
         ];
     }
 

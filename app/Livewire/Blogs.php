@@ -13,7 +13,7 @@ class Blogs extends Component
 {
     public function with(){
         return [
-            'blogs' => Blog::all()
+            'blogs' => Blog::query()->where('status', 'publish')->get()
         ];
     }
 

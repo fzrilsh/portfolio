@@ -3,7 +3,7 @@
         <h1 class="font-bold text-3xl mb-1">Fazril Syaveral Hillaby</h1>
         <p class="opacity-60 mb-10">Student &amp; Web Developer</p>
         <div class="flex flex-row gap-6 mb-8">
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQFId_7gd_ua0A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1714835080375?e=1732752000&v=beta&t=4chwEUAhf6Eb36sHtBbtWpZZ8GvuA6zQC4SAf3MhpLM" alt="Fazril Syaveral Hillaby" class="rounded-full" width="100" height="100" loading="lazy" decoding="async">
+            <img src="{{ asset('public/images/pas.jpg') }}" alt="Fazril Syaveral Hillaby" class="rounded-full" width="100" height="100" loading="lazy" decoding="async">
             <div class="group flex flex-col justify-center gap-2 w-fit"> 
                 <a href="https://github.com/fzrilsh" class="flex items-center gap-3 opacity-60 group-hover:opacity-30 hover:!opacity-60 transition-opacity" target="_blank">
                     <svg width="25" height="25" class="text-black"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">

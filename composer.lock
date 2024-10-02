@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "178eedf0fe8512df609cfda17e3c3d8a",
+    "content-hash": "000d2b484f1e23ceca9d87220271b219",
     "packages": [
         {
             "name": "brick/math",
@@ -134,6 +134,72 @@
                 }
             ],
             "time": "2024-02-09T16:56:22+00:00"
+        },
+        {
+            "name": "dasundev/livewire-quill-text-editor",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dasundev/livewire-quill-text-editor.git",
+                "reference": "f353f832d3f0b8ddb759df4cb7cad5d6b9d7276e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dasundev/livewire-quill-text-editor/zipball/f353f832d3f0b8ddb759df4cb7cad5d6b9d7276e",
+                "reference": "f353f832d3f0b8ddb759df4cb7cad5d6b9d7276e",
+                "shasum": ""
+            },
+            "require": {
+                "livewire/livewire": "^3.0",
+                "php": "^8.1",
+                "spatie/laravel-package-tools": "^1.16"
+            },
+            "require-dev": {
+                "larastan/larastan": "^2.0",
+                "laravel/pint": "^1.13",
+                "orchestra/testbench": "^8.0",
+                "pestphp/pest": "^2.30"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dasundev\\LivewireQuillTextEditor\\LivewireQuillTextEditorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dasundev\\LivewireQuillTextEditor\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dasun Tharanga",
+                    "email": "hello@dasun.dev",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A powerful livewire rich text editor component built top of Quill.",
+            "keywords": [
+                "editor",
+                "livewire"
+            ],
+            "support": {
+                "issues": "https://github.com/dasundev/livewire-quill-text-editor/issues",
+                "source": "https://github.com/dasundev/livewire-quill-text-editor/tree/v1.0.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/dasundev",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-04-18T15:02:59+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -3324,6 +3390,66 @@
             "time": "2024-04-27T21:32:50+00:00"
         },
         {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.16.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "c7413972cf22ffdff97b68499c22baa04eddb6a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/c7413972cf22ffdff97b68499c22baa04eddb6a2",
+                "reference": "c7413972cf22ffdff97b68499c22baa04eddb6a2",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.28|^10.0|^11.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "orchestra/testbench": "^7.7|^8.0",
+                "pestphp/pest": "^1.22",
+                "phpunit/phpunit": "^9.5.24",
+                "spatie/pest-plugin-test-time": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.16.5"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-08-27T18:56:10+00:00"
+        },
+        {
             "name": "symfony/clock",
             "version": "v7.1.1",
             "source": {
@@ -5551,16 +5677,16 @@
         },
         {
             "name": "tallstackui/tallstackui",
-            "version": "v1.35.6",
+            "version": "v1.35.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tallstackui/tallstackui.git",
-                "reference": "4a722fb294c292551ce35bffd3634fc7c92c4dd4"
+                "reference": "b444d2372402205e1d6417497a3827cfe5f7e881"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/4a722fb294c292551ce35bffd3634fc7c92c4dd4",
-                "reference": "4a722fb294c292551ce35bffd3634fc7c92c4dd4",
+                "url": "https://api.github.com/repos/tallstackui/tallstackui/zipball/b444d2372402205e1d6417497a3827cfe5f7e881",
+                "reference": "b444d2372402205e1d6417497a3827cfe5f7e881",
                 "shasum": ""
             },
             "require": {
@@ -5610,7 +5736,7 @@
             "description": "TallStackUI is a powerful suite of Blade components that elevate your workflow of Livewire applications.",
             "support": {
                 "issues": "https://github.com/tallstackui/tallstackui/issues",
-                "source": "https://github.com/tallstackui/tallstackui/tree/v1.35.6"
+                "source": "https://github.com/tallstackui/tallstackui/tree/v1.35.7"
             },
             "funding": [
                 {
@@ -5618,7 +5744,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-09-05T03:12:36+00:00"
+            "time": "2024-09-24T12:34:44+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

@@ -9,6 +9,11 @@ class Project extends Model
 {
     use HasFactory;
 
-    protected $guards = [];
+    protected $fillable = [
+        'title',
+        'description',
+        'image',
+        'link'
+    ];
     public $timestamps = true;
 }
