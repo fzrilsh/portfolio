@@ -8,7 +8,7 @@
     <meta name="generator" content="fzrilsh_">
     <title>{{ $title ?? 'Fazril Syaveral Hillaby' }}</title>
     <meta name="description" content="Building dynamic backend system enjoyer. Focused on developing intuitive experiences that constantly grow and improve based on server side. Casual and proficient in communication.">
-    <meta property="og:title" content="Fazril Syaveral Hillaby">
+    <meta property="og:title" content="{{ $title ?? 'Fazril Syaveral Hillaby' }}">
     <meta property="og:description" content="Building dynamic backend system enjoyer. Focused on developing intuitive experiences that constantly grow and improve based on server side. Casual and proficient in communication.">
     <meta property="og:image" content="{{ asset('public/images/logo.png') }}">
 
