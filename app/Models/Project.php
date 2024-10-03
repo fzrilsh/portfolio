@@ -9,11 +9,11 @@ class Project extends Model
 {
     use HasFactory;
 
+    public $timestamps = true;
     protected $fillable = [
         'title',
         'description',
         'image',
         'link'
     ];
-    public $timestamps = true;
 }

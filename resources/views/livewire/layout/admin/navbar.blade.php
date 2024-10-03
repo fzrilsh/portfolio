@@ -49,8 +49,8 @@ new class extends Component
                 </a>
             </li>
             <li>
-                <a href="#"
-                    class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 hover:text-gray-800 hover:border-blue-400 {{ request()->routeIs('admin.dashboard') ? 'bg-gray-50 text-gray-800 border-blue-400' : 'text-gray-600 border-transparent' }} border-l-4 pr-6">
+                <a href="{{ route('admin.projects') }}"
+                    class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 hover:text-gray-800 hover:border-blue-400 {{ request()->routeIs('admin.projects') ? 'bg-gray-50 text-gray-800 border-blue-400' : 'text-gray-600 border-transparent' }} border-l-4 pr-6">
                     <span class="inline-flex justify-center items-center ml-4">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">

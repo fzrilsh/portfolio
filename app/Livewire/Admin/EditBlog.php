@@ -58,6 +58,7 @@ class EditBlog extends Component
             File::delete($content['path'] . '/' . $content['real_name']);
         }else{
             $this->thumbnail->delete();
+            $this->thumbnail = null;
         }
     }
 
@@ -68,11 +69,11 @@ class EditBlog extends Component
 
     public function rules(){
         return [
-            'thumbnail' => 'required',
-            'title' => 'required|min:5',
-            'content' => 'required|min:10',
-            'status' => 'required|in:draft,publish',
-            'slug' => 'required'
+            'thumbnail' => 'file',
+            'title' => 'min:5',
+            'content' => 'min:10',
+            'status' => 'in:draft,publish',
+            'slug' => 'string'
         ];
     }
 

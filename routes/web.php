@@ -8,6 +8,9 @@ use App\Livewire\Admin\Dashboard as AdminDashboard;
 use App\Livewire\Admin\Blogs as AdminBlogs;
 use App\Livewire\Admin\CreateBlog as AdminCreateBlog;
 use App\Livewire\Admin\EditBlog as AdminEditBlog;
+use App\Livewire\Admin\Projects as AdminProjects;
+use App\Livewire\Admin\CreateProject as AdminCreateProject;
+use App\Livewire\Admin\EditProject as AdminEditProject;
 
 use App\Livewire\About;
 use App\Livewire\Blogs;
@@ -29,9 +32,14 @@ Route::prefix('admin')->group(function(){
 
     Route::middleware('auth:sanctum')->group(function(){
         Route::get('/', AdminDashboard::class)->name('admin.dashboard');
+
         Route::get('/blog', AdminBlogs::class)->name('admin.blogs');
         Route::get('/blog/create', AdminCreateBlog::class)->name('admin.blogs.create');
         Route::get('/blog/edit/{id}', AdminEditBlog::class)->name('admin.blogs.edit');
+
+        Route::get('/project', AdminProjects::class)->name('admin.projects');
+        Route::get('/project/create', AdminCreateProject::class)->name('admin.projects.create');
+        Route::get('/project/edit/{id}', AdminEditProject::class)->name('admin.projects.edit');
 
         Route::get('/logout', function(){
             auth('web')->logout();

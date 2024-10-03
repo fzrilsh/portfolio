@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('viewers', function (Blueprint $table) {
             $table->id();
             $table->string('ip');
-            $table->string('user-agent');
+            $table->longText('user-agent');
             $table->timestamps();
         });
     }

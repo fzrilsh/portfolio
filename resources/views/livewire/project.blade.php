@@ -6,7 +6,7 @@
             @foreach ($projects as $project)
             <a href="{{ $project->link }}" target="_blank" class="sm:py-5 py-10 flex flex-col sm:flex-row gap-6 group-hover:opacity-60 hover:!opacity-100 transition-opacity">
                 <div class="h-full bg-gray-700 rounded-lg aspect-video sm:h-[150px]"> 
-                    <img src="{{ assset('storage/' . $project->image) }}" alt="{{ $project->title }}" class="w-full h-full object-cover rounded-lg aspect-video" width="1920" height="1080" loading="lazy" decoding="async">
+                    <img src="{{ asset('public/storage/' . $project->image) }}" alt="{{ $project->title }}" class="w-full h-full object-cover rounded-lg aspect-video" width="1920" height="1080" loading="lazy" decoding="async">
                 </div>
                 <div>
                     <div class="flex items-center gap-1 mb-2">

@@ -26,6 +26,7 @@ class CreateBlog extends Component
     public function deleteUpload(){
         if($this->thumbnail){
             $this->thumbnail->delete();
+            $this->thumbnail = null;
         }
     }
 
