@@ -1,7 +1,7 @@
 import frontMatter from 'front-matter';
 
 export async function getAllPosts() {
-  const response = await fetch('/blog/index.json')
+  const response = await fetch('/blog-contents/index.json')
   if (!response.ok) {
     throw new Error('Failed to fetch blog index')
   }
@@ -10,7 +10,7 @@ export async function getAllPosts() {
 }
 
 export async function getPostBySlug(slug) {
-  const response = await fetch(`/blog/${slug}.md`)
+  const response = await fetch(`/blog-contents/${slug}.md`)
   if (!response.ok) {
     return null
   }
