@@ -93,3 +93,161 @@ body {
     box-shadow: 0 0 40px rgba(0, 212, 255, 0.6), 0 0 80px rgba(0, 212, 255, 0.25);
   }
 }
+
+/* ── Markdown Content (Blog Posts) ── */
+.prose-content {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.prose-content h1,
+.prose-content h2,
+.prose-content h3,
+.prose-content h4,
+.prose-content h5,
+.prose-content h6 {
+  color: #ffffff;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  line-height: 1.3;
+}
+
+.prose-content h2 {
+  font-size: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.4em;
+}
+
+.prose-content h3 {
+  font-size: 22px;
+}
+
+.prose-content p {
+  margin-bottom: 1.25em;
+}
+
+.prose-content a {
+  color: #00D4FF;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.prose-content a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.prose-content strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.prose-content ul,
+.prose-content ol {
+  margin-bottom: 1.25em;
+  padding-left: 1.5em;
+}
+
+.prose-content ul {
+  list-style-type: disc;
+}
+
+.prose-content ol {
+  list-style-type: decimal;
+}
+
+.prose-content li {
+  margin-bottom: 0.5em;
+}
+
+.prose-content li::marker {
+  color: #00D4FF;
+}
+
+.prose-content blockquote {
+  border-left: 3px solid #00D4FF;
+  margin: 1.5em 0;
+  padding: 0.75em 1.25em;
+  background: rgba(0, 212, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+.prose-content blockquote p {
+  margin-bottom: 0;
+}
+
+.prose-content code {
+  background: rgba(255, 255, 255, 0.08);
+  color: #00D4FF;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: 'Fira Code', 'JetBrains Mono', 'Cascadia Code', 'Menlo', 'Monaco', monospace;
+}
+
+.prose-content pre {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1.25em;
+  margin: 1.5em 0;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.prose-content pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+.prose-content hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2em 0;
+}
+
+.prose-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1.5em 0;
+}
+
+.prose-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+.prose-content th,
+.prose-content td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.6em 1em;
+  text-align: left;
+}
+
+.prose-content th {
+  background: rgba(0, 212, 255, 0.1);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .prose-content {
+    font-size: 15px;
+  }
+
+  .prose-content h2 {
+    font-size: 24px;
+  }
+
+  .prose-content h3 {
+    font-size: 20px;
+  }
+}
