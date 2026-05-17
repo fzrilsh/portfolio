@@ -74,7 +74,6 @@ export default function BlogPost() {
           setNotFound(true)
         } else {
           setPost(data)
-          console.log(data)
         }
       })
       .catch(setError)
