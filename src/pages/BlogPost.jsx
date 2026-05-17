@@ -70,6 +70,8 @@ export default function BlogPost() {
       .then((data) => {
         if (!data) {
           setNotFound(true)
+        } else if (!data.frontmatter?.title) {
+          setNotFound(true)
         } else {
           setPost(data)
           console.log(data)
