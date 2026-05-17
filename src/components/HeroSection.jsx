@@ -4,44 +4,58 @@ import NetworkBackground from "./NetworkBackground";
 
 const floatingBadges = [
   {
-    label: "Laravel",
-    className: "top-[-14px] left-[-36px] md:left-[-60px] lg:left-[-70px]",
+    label: "MongoDB",
+    className: "top-[80%] left-[-15px] md:left-[-25px] lg:left-[-35px]",
     delayMs: 0,
+    image: "MongoDB.png",
   },
   {
-    label: "React",
-    className: "top-[-6px] right-[-28px] md:right-[-50px] lg:right-[-60px]",
-    delayMs: 400,
-  },
-  {
-    label: "Next.js",
-    className: "top-[28%] right-[-48px] md:right-[-80px] lg:right-[-90px]",
-    delayMs: 800,
-  },
-  {
-    label: "Golang",
-    className: "bottom-[28%] right-[-42px] md:right-[-72px] lg:right-[-82px]",
-    delayMs: 1200,
-  },
-  {
-    label: "PHP",
-    className: "bottom-[-18px] left-[-32px] md:left-[-52px] lg:left-[-62px]",
-    delayMs: 1600,
-  },
-  {
-    label: "TypeScript",
-    className: "top-[32%] left-[-52px] md:left-[-88px] lg:left-[-100px]",
-    delayMs: 600,
-  },
-  {
-    label: "Docker",
-    className: "bottom-[-10px] right-[24px] md:right-[44px] lg:right-[54px]",
-    delayMs: 1400,
+    label: "PostgreSQL",
+    className: "top-[45%] left-[-35px] md:left-[-60px] lg:left-[-80px]",
+    delayMs: 200,
+    image: "PostgreSQL.png",
   },
   {
     label: "MySQL",
-    className: "bottom-[36%] left-[-58px] md:left-[-96px] lg:left-[-110px]",
-    delayMs: 2000,
+    className: "top-[16%] md:top-[10%] left-[-25px] md:left-[-40px] lg:left-[-60px]",
+    delayMs: 400,
+    image: "MySQL.png",
+  },
+  {
+    label: "Laravel",
+    className: "top-[-25px] md:top-[-40px] lg:top-[-55px] left-[5%] md:left-[10%] lg:left-[5%]",
+    delayMs: 600,
+    image: "Laravel.png",
+  },
+  {
+    label: "Docker",
+    className: "top-[-40px] md:top-[-60px] lg:top-[-80px] left-[38%] md:left-[42%] lg:left-[40%]",
+    delayMs: 800,
+    image: "Docker.png",
+  },
+  {
+    label: "React",
+    className: "top-[-25px] md:top-[-40px] lg:top-[-55px] right-[10%] md:right-[15%] lg:right-[2%]",
+    delayMs: 1000,
+    image: "React.png",
+  },
+  {
+    label: "Next.js",
+    className: "top-[14%] md:top-[11%] right-[-25px] md:right-[-40px] lg:right-[-60px]",
+    delayMs: 1200,
+    image: "Nextjs.webp",
+  },
+  {
+    label: "Golang",
+    className: "top-[45%] right-[-35px] md:right-[-60px] lg:right-[-80px]",
+    delayMs: 1400,
+    image: "Golang.png",
+  },
+  {
+    label: "Prisma",
+    className: "top-[80%] right-[-15px] md:right-[-25px] lg:right-[-35px]",
+    delayMs: 1600,
+    image: "Prisma.png",
   },
 ];
 
@@ -142,16 +156,20 @@ const HeroSection = () => {
 
           <div className="relative flex-shrink-0 order-1 lg:order-2 mt-4 lg:mt-0">
             {floatingBadges.map((badge) => (
-              <span
+              <div
                 key={badge.label}
-                className={`absolute ${badge.className} z-20 px-2.5 py-1 text-[11px] md:text-xs font-semibold text-accent bg-black/80 border border-accent shadow-[0_0_10px_rgba(0,212,255,0.35)] select-none whitespace-nowrap`}
+                className={`absolute ${badge.className} z-20 flex items-center justify-center w-12 h-12 md:w-18 md:h-18 backdrop-blur-2xl rounded-full shadow-[0_0_20px_rgba(0,212,255,0.4)]`}
                 style={{
                   animation: `floatBadge 3.5s ease-in-out infinite`,
                   animationDelay: `${badge.delayMs}ms`,
                 }}
               >
-                {badge.label}
-              </span>
+                <img
+                  src={`/images/icons/${badge.image}`}
+                  alt={`${badge.label} icon`}
+                  className="w-8 h-8 md:w-12 md:h-12 object-contain select-none p-1"
+                />
+              </div>
             ))}
 
             <div
