@@ -116,7 +116,7 @@ const Navigation = () => {
             {navLinks.map((link, index) => (
               <button
                 key={link.id}
-                onClick={() => scrollToSection(link.id)}
+                onClick={() => link.path ? redirect(link.path) : scrollToSection(link.id)}
                 className="text-[28px] font-medium text-white/80 bg-transparent border-none cursor-pointer opacity-80 translate-y-5 animate-[slideIn_0.3s_ease_forwards]"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
