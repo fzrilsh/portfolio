@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, Download } from 'lucide-react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { Menu, X, Download } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,41 +13,46 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
 
   const scrollToSection = (id) => {
-    if (location.pathname !== '/') {
+    if (location.pathname !== "/") {
       navigate(`/#${id}`);
     } else {
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     }
     setIsMobileMenuOpen(false);
   };
 
+  const redirect = (path) => {
+    navigate(`/${path}`);
+  };
+
   const navLinks = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'achievements', label: 'Achievements' },
-    { id: 'portfolio', label: 'Portfolio' },
-    { id: 'contact', label: 'Contact' },
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { path: "blog", label: "Blog" },
+    { id: "achievements", label: "Achievements" },
+    { id: "portfolio", label: "Portfolio" },
+    { id: "contact", label: "Contact" },
   ];
 
   const navBg = isScrolled
-    ? 'bg-black/95 border-b border-white/10 backdrop-blur-[10px]'
-    : 'bg-transparent border-b border-transparent backdrop-blur-none';
+    ? "bg-black/95 border-b border-white/10 backdrop-blur-[10px]"
+    : "bg-transparent border-b border-transparent backdrop-blur-none";
 
   return (
     <>
@@ -56,7 +61,7 @@ const Navigation = () => {
       >
         <div className="max-w-[1400px] mx-auto px-5 py-4 flex items-center justify-between">
           <button
-            onClick={() => scrollToSection('home')}
+            onClick={() => scrollToSection("home")}
             className="bg-transparent border-none cursor-pointer transition-opacity duration-300 hover:opacity-80"
           >
             <img
@@ -75,7 +80,7 @@ const Navigation = () => {
             {navLinks.map((link) => (
               <button
                 key={link.id}
-                onClick={() => scrollToSection(link.id)}
+                onClick={() => link.path ? redirect(link.path) : scrollToSection(link.id)}
                 className="text-base font-normal text-white/70 hover:text-accent bg-transparent border-none cursor-pointer transition-colors duration-300"
               >
                 {link.label}
@@ -123,7 +128,7 @@ const Navigation = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-accent text-black px-8 py-4 no-underline font-medium text-lg mt-5 translate-y-5 animate-[slideIn_0.3s_ease_forwards]"
-              style={{ animationDelay: '0.5s' }}
+              style={{ animationDelay: "0.5s" }}
             >
               <Download size={20} />
               Download CV
