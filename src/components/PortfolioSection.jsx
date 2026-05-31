@@ -1,90 +1,121 @@
-import React from 'react';
+import React from "react";
 
 const PortfolioSection = () => {
   const projects = [
     {
       id: 1,
-      title: 'EduNote',
-      description: 'A full-stack note-taking and task management application built with the MERN stack to deliver a dynamic and responsive user experience. It features a clean dashboard for creating notes and tracking tasks, organization via custom labels, and a secure authentication flow powered by Google OAuth.',
-      tech: ['MERN Stack', 'Google OAuth'],
-      image: '/images/portfolio_edunote.webp',
+      title: "EduNote",
+      description:
+        "A full-stack note-taking and task management application built with the MERN stack to deliver a dynamic and responsive user experience. It features a clean dashboard for creating notes and tracking tasks, organization via custom labels, and a secure authentication flow powered by Google OAuth.",
+      tech: ["MERN Stack", "Google OAuth"],
+      image: "/images/portfolio_edunote.webp",
     },
     {
       id: 2,
-      title: 'BlindMaze',
-      description: 'A challenging 2D puzzle game that tests your memory and spatial awareness. Inspired by a segment in Ruang Guru\'s \'Clash of Champions\' competition, BlindMaze presents players with a complete maze for a memorize period. After the maze disappears, players must rely on their memory alone to guide their character through the unseen walls and reach the finish line.',
-      tech: ['HTML5 Canvas', 'JavaScript'],
-      image: '/images/portfolio_blindmaze.webp',
-      url: '/games/blindmaze',
+      title: "BlindMaze",
+      description:
+        "A challenging 2D puzzle game that tests your memory and spatial awareness. Inspired by a segment in Ruang Guru's 'Clash of Champions' competition, BlindMaze presents players with a complete maze for a memorize period. After the maze disappears, players must rely on their memory alone to guide their character through the unseen walls and reach the finish line.",
+      tech: ["HTML5 Canvas", "JavaScript"],
+      image: "/images/portfolio_blindmaze.webp",
+      url: "/games/blindmaze",
     },
     {
       id: 3,
-      title: 'SekolahAwan.id',
-      description: 'A Software-as-a-Service (SaaS) application for school management, built on the TALL stack. It utilizes Laravel Tenancy to provide a robust multi-tenant architecture, allowing each school to operate with its own isolated and secure data.',
-      tech: ['TALL Stack', 'Tenancy'],
-      image: '/images/portfolio_sekolahawan.webp',
-      url: 'https://sekolahawan.id/',
+      title: "SekolahAwan.id",
+      description:
+        "A Software-as-a-Service (SaaS) application for school management, built on the TALL stack. It utilizes Laravel Tenancy to provide a robust multi-tenant architecture, allowing each school to operate with its own isolated and secure data.",
+      tech: ["TALL Stack", "Tenancy"],
+      image: "/images/portfolio_sekolahawan.webp",
+      url: "https://sekolahawan.id/",
     },
     {
       id: 4,
-      title: 'FreshVora',
-      description: 'Contributed to the FreshVora platform by developing several key frontend components for its Learning Management System (LMS) using Next.js. On the backend, I designed and implemented multiple microservices in Go to power core functionalities, including systems for form submission, learning management, payment processing, and content management.',
-      tech: ['NextJS', 'Go Microservices'],
-      image: '/images/portfolio_freshvora.webp',
-      url: 'https://freshvora.com/',
+      title: "FreshVora",
+      description:
+        "Contributed to the FreshVora platform by developing several key frontend components for its Learning Management System (LMS) using Next.js. On the backend, I designed and implemented multiple microservices in Go to power core functionalities, including systems for form submission, learning management, payment processing, and content management.",
+      tech: ["NextJS", "Go Microservices"],
+      image: "/images/portfolio_freshvora.webp",
+      url: "https://freshvora.com/",
     },
     {
       id: 5,
-      title: 'Damai Agung Florist',
-      description: 'Built an e-commerce website for a local flower shop using Laravel and Tailwind CSS. The project included a custom CMS to give the client full control over their product listings and content.',
-      tech: ['Laravel', 'Tailwind', 'Flowbite'],
-      image: '/images/portfolio_damaiagungflorist.webp',
-      url: 'https://damaiagungflorist.com/'
+      title: "Damai Agung Florist",
+      description:
+        "Built an e-commerce website for a local flower shop using Laravel and Tailwind CSS. The project included a custom CMS to give the client full control over their product listings and content.",
+      tech: ["Laravel", "Tailwind", "Flowbite"],
+      image: "/images/portfolio_damaiagungflorist.webp",
+      url: "https://damaiagungflorist.com/",
     },
     {
       id: 6,
-      title: 'PT. Abuhasdha & CO.',
-      description: 'Developed a company profile website for PT. Abuhasdha & CO. by building a custom WordPress theme from the ground up. This solution empowers the client to dynamically update and manage website content with ease, without needing any technical assistance.',
-      tech: ['Wordpress'],
-      image: '/images/portfolio_abuhasdha.webp',
-      url: 'https://abuhasdha.com/'
+      title: "PT. Abuhasdha & CO.",
+      description:
+        "Developed a company profile website for PT. Abuhasdha & CO. by building a custom WordPress theme from the ground up. This solution empowers the client to dynamically update and manage website content with ease, without needing any technical assistance.",
+      tech: ["Wordpress"],
+      image: "/images/portfolio_abuhasdha.webp",
+      url: "https://abuhasdha.com/",
     },
     {
       id: 7,
-      title: 'Voyago (Mock-up)',
-      description: 'Voyago is your gateway to meaningful travel experiences — from neighbourhood excursions to cross-border adventures. We make it simple, personal, and locally rooted.',
-      tech: ['TALL Stack', 'FluxUI'],
-      image: '/images/portfolio_voyago.webp',
-      url: '/voyago'
+      title: "Voyago (Mock-up)",
+      description:
+        "Voyago is your gateway to meaningful travel experiences — from neighbourhood excursions to cross-border adventures. We make it simple, personal, and locally rooted.",
+      tech: ["TALL Stack", "FluxUI"],
+      image: "/images/portfolio_voyago.webp",
+      url: "/voyago",
     },
     {
       id: 8,
-      title: 'TemuLokal',
-      description: 'Built an prototype platform to manage and promote local UMKM in indonesia using ReactJS and TailwindCSS. The project have many TODO to make the platform have a great flow and feature.',
-      tech: ['ReactJS', 'TailwindCSS'],
-      image: '/images/portfolio_temulokal.webp',
-      url: '/temulokal'
+      title: "TemuLokal",
+      description:
+        "Built an prototype platform to manage and promote local UMKM in indonesia using ReactJS and TailwindCSS. The project have many TODO to make the platform have a great flow and feature.",
+      tech: ["ReactJS", "TailwindCSS"],
+      image: "/images/portfolio_temulokal.webp",
+      url: "/temulokal",
     },
     {
       id: 9,
-      title: 'Revibe',
-      description: 'PWA mobile web app designed as a community cosmetics directory POC. It features product discovery, user contributions, interactive forums, and engagement challenges. Currently a prototype focused on refining user flow and core features.',
-      tech: ['NextJS', 'Supabase'],
-      image: '/images/portfolio_revibe.webp',
-      url: 'https://revibe-azure.vercel.app/'
+      title: "Revibe",
+      description:
+        "PWA mobile web app designed as a community cosmetics directory POC. It features product discovery, user contributions, interactive forums, and engagement challenges. Currently a prototype focused on refining user flow and core features.",
+      tech: ["NextJS", "Supabase"],
+      image: "/images/portfolio_revibe.webp",
+      url: "https://revibe-azure.vercel.app/",
     },
     {
       id: 10,
-      title: 'RiskGuard',
-      description: 'AI-based Risk and Trust Monitoring System developed by the "Kent Jadi Normal" team. The project is designed to secure growth within digital payment ecosystems, specifically for Paylabs, by solving the complexities of high transaction volumes and the limitations of static, rule-based monitoring.',
-      tech: ['Python', 'ReactJS'],
-      image: '/images/portfolio_riskguard.webp',
-      url: '/pitch-deck-riskguard.pdf'
+      title: "RiskGuard",
+      description:
+        'AI-based Risk and Trust Monitoring System developed by the "Kent Jadi Normal" team. The project is designed to secure growth within digital payment ecosystems, specifically for Paylabs, by solving the complexities of high transaction volumes and the limitations of static, rule-based monitoring.',
+      tech: ["Python", "ReactJS"],
+      image: "/images/portfolio_riskguard.webp",
+      url: "/pitch-deck-riskguard.pdf",
     },
-  ].reverse()
+    {
+      id: 10,
+      title: "ReMon",
+      description:
+        "A comprehensive personal finance management web application designed to simplify money reallocation. It features an automated expense & income tracker, split bill management with asynchronous AI-powered payment proof verification, debt tracking (hutang-piutang), monthly financial analytics with interactive Chart.js visualizations, and a progressive web app (PWA) experience.",
+      tech: [
+        "Node.js",
+        "Express",
+        "EJS",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "Prisma",
+        "Chart.js",
+        "Tesseract.js",
+      ],
+      image: "/images/portfolio_remon.webp",
+      url: "https://remon.fzrby.web.id/",
+    },
+  ].reverse();
 
   return (
-    <section id="portfolio" className="bg-black px-10 py-[120px] max-md:px-6 max-md:py-[60px]">
+    <section
+      id="portfolio"
+      className="bg-black px-10 py-[120px] max-md:px-6 max-md:py-[60px]"
+    >
       <div className="mx-auto max-w-[1400px]">
         <h2 className="mb-5 text-[48px] font-semibold -tracking-[1px] text-white max-md:mb-4 max-md:text-[32px] max-[414px]:text-[28px]">
           Portfolio
@@ -104,7 +135,7 @@ const PortfolioSection = () => {
                 <img
                   src={project.image}
                   alt={`${project.title} - Project Screenshot`}
-                  style={{ objectFit: 'contain' }}
+                  style={{ objectFit: "contain" }}
                   className="transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
