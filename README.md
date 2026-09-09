@@ -26,4 +26,4 @@ npm run preview
 
 ## Deploy
 
-Push to `main` → GitHub Actions auto-builds to `production` branch.
+Push to `main` → GitHub Actions builds the application and synchronizes `dist/` to the configured VPS with `rsync`.
