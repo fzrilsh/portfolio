@@ -32,27 +32,13 @@ jobs:
       - name: Build application
         run: npm run build
 
-      - name: Configure SSH
-        env:
-          VPS_HOST: ${{ secrets.VPS_HOST }}
-          VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
-        run: |
-          set -euo pipefail
-          install -d -m 700 ~/.ssh
-          printf '%s\n' "$VPS_SSH_KEY" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -H "$VPS_HOST" >> ~/.ssh/known_hosts
-          chmod 644 ~/.ssh/known_hosts
-
-      - name: Deploy build to VPS
-        env:
-          VPS_HOST: ${{ secrets.VPS_HOST }}
-          VPS_USER: ${{ secrets.VPS_USER }}
-          VPS_SSH_KEY: ~/.ssh/id_ed25519
-          REMOTE_PATH: /home/deploy/services/portfolio/dist/
-        run: |
-          set -euo pipefail
-          rsync --archive --compress --delete \
-            --exclude='.DS_Store' \
-            -e "ssh -i $VPS_SSH_KEY -o IdentitiesOnly=yes" \
-            dist/ "$VPS_USER@$VPS_HOST:$REMOTE_PATH"
+      - name: Deploy to VPS via rsync
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avzr --delete
+          path: dist/
+          remote_path: /home/deploy/services/portfolio/dist/
+          remote_host: ${{ secrets.VPS_HOST }}
+          remote_port: ${{ secrets.VPS_PORT }}
+          remote_user: ${{ secrets.VPS_USER }}
+          remote_key: ${{ secrets.VPS_SSH_KEY }}
