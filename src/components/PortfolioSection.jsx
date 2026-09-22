@@ -127,6 +127,38 @@ const PortfolioSection = () => {
       image: "/images/portfolio_my-drive.webp",
       url: "https://my-drive.fzrby.web.id/",
     },
+    {
+      id: 14,
+      title: "Devotion",
+      description:
+        "A B2B marketplace connecting Indonesian garment (konveksi) SMEs with unused production capacity to businesses whose orders exceed their own capacity. Subcontractors publish weekly capacity calendars with their supported products and machines, while buyers search and get candidates ranked by a deterministic 4-criteria hard-scoring system (product match, machine match, lead-time fit, and cumulative capacity toward deadline), explicitly excluding reputation, verification badges, or distance from the score. Buyers send multi-candidate quota requests that become work orders once an offer is accepted, with capacity allocation written under a single transaction with ordered row locks to prevent double-booking. Orders flow through a 7-state machine with 7-day auto-confirm, dispute handling, and admin mediation. Built as a single Go binary embedding the React frontend, with WhatsApp notifications via whatsmeow and identity verification using magic-byte file validation. Built as backend developer for ITECHNO CUP 2026.",
+      tech: [
+        "Go",
+        "React",
+        "PostgreSQL",
+        "TypeScript",
+        "Tailwind CSS",
+        "Leaflet",
+      ],
+      image: "/images/portfolio_devotion.webp",
+      url: "https://github.com/fzrilsh/devotion",
+    },
+    {
+      id: 15,
+      title: "WHanjir",
+      description:
+        "An interactive real-time flood risk mapping web app for West Jakarta, built for a Human and Computer Interaction (HCI) university course. Roads and sub-districts (kelurahan) are color-coded into three risk tiers (Aman, Tergenang, Banjir Parah) based on a live risk score, with search by road or kelurahan name, a thematic area view for district-wide risk, and alternative-route suggestions rendered with white outlines so they stay legible even over high-risk roads. Includes GPS geolocation to show the user's position relative to flood zones, light/dark/system theme with persisted preference, and PWA installability with offline caching. Risk data streams in real-time via Socket.IO from a Flask backend and auto-refreshes without manual reload.",
+      tech: [
+        "Go",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "MapLibre GL JS",
+        "Socket.IO",
+      ],
+      image: "/images/portfolio_whanjir.webp",
+      url: "https://fzrilsh.github.io/WHanjir/",
+    },
   ].reverse();
 
   return (
@@ -147,8 +179,9 @@ const PortfolioSection = () => {
             return (
               <div
                 key={project.id}
-                className={`flex flex-col gap-8 lg:gap-16 items-center ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"
-                  } group`}
+                className={`flex flex-col gap-8 lg:gap-16 items-center ${
+                  isEven ? "lg:flex-row" : "lg:flex-row-reverse"
+                } group`}
               >
                 {/* Image Showcase Container */}
                 <div className="w-full lg:w-1/2 aspect-[16/10] overflow-hidden border border-white-10 bg-white-3 rounded-lg relative transition-all duration-300 hover:border-accent hover:shadow-[0_0_30px_rgba(0,212,255,0.15)]">
@@ -223,7 +256,6 @@ const PortfolioSection = () => {
       </div>
     </section>
   );
-
 };
 
 export default PortfolioSection;
