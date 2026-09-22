@@ -131,7 +131,7 @@ const PortfolioSection = () => {
       id: 14,
       title: "Devotion",
       description:
-        "A B2B marketplace connecting Indonesian garment (konveksi) SMEs with unused production capacity to businesses whose orders exceed their own capacity. Subcontractors publish weekly capacity calendars with their supported products and machines, while buyers search and get candidates ranked by a deterministic 4-criteria hard-scoring system (product match, machine match, lead-time fit, and cumulative capacity toward deadline), explicitly excluding reputation, verification badges, or distance from the score. Buyers send multi-candidate quota requests that become work orders once an offer is accepted, with capacity allocation written under a single transaction with ordered row locks to prevent double-booking. Orders flow through a 7-state machine with 7-day auto-confirm, dispute handling, and admin mediation. Built as a single Go binary embedding the React frontend, with WhatsApp notifications via whatsmeow and identity verification using magic-byte file validation. Built as backend developer for ITECHNO CUP 2026.",
+        "A B2B marketplace matching Indonesian garment (konveksi) SMEs with unused production capacity to buyers whose orders exceed their own. Candidates are ranked by a deterministic 4-criteria scoring system (product, machine, lead-time, capacity), with multi-candidate quota requests, race-safe capacity allocation, and a 7-state order flow with auto-confirm and dispute mediation. Built as a single Go binary embedding the React frontend, for ITECHNO CUP 2026.",
       tech: [
         "Go",
         "React",
@@ -147,7 +147,7 @@ const PortfolioSection = () => {
       id: 15,
       title: "WHanjir",
       description:
-        "An interactive real-time flood risk mapping web app for West Jakarta, built for a Human and Computer Interaction (HCI) university course. Roads and sub-districts (kelurahan) are color-coded into three risk tiers (Aman, Tergenang, Banjir Parah) based on a live risk score, with search by road or kelurahan name, a thematic area view for district-wide risk, and alternative-route suggestions rendered with white outlines so they stay legible even over high-risk roads. Includes GPS geolocation to show the user's position relative to flood zones, light/dark/system theme with persisted preference, and PWA installability with offline caching. Risk data streams in real-time via Socket.IO from a Flask backend and auto-refreshes without manual reload.",
+        "An interactive real-time flood risk mapping web app for West Jakarta, built for an HCI university course. Roads and kelurahan are color-coded by live risk score into three tiers, with search, a thematic area view, alternative-route suggestions, and GPS geolocation. Data streams via Socket.IO from a Flask backend, with light/dark theming and PWA installability.",
       tech: [
         "Go",
         "React",
