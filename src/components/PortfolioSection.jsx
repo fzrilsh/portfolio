@@ -156,7 +156,7 @@ const PortfolioSection = () => {
         "MapLibre GL JS",
         "Socket.IO",
       ],
-      image: "/images/portfolio_whanjir.webp",
+      image: "/images/portfolio_whanjir.png",
       url: "https://fzrilsh.github.io/WHanjir/",
     },
   ].reverse();
