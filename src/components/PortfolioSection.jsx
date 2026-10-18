@@ -68,7 +68,7 @@ const PortfolioSection = () => {
       id: 8,
       title: "Voyago (Mock-up)",
       description:
-        "Voyago is your gateway to meaningful travel experiences — from neighbourhood excursions to cross-border adventures. We make it simple, personal, and locally rooted.",
+        "Voyago is your gateway to meaningful travel experiences, from neighbourhood excursions to cross-border adventures. We make it simple, personal, and locally rooted.",
       tech: ["TALL Stack", "FluxUI"],
       image: "/images/portfolio_voyago.webp",
       url: "/voyago",
