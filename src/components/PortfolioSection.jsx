@@ -159,6 +159,15 @@ const PortfolioSection = () => {
       image: "/images/portfolio_whanjir.webp",
       url: "https://fzrilsh.github.io/WHanjir/",
     },
+    {
+      id: 16,
+      title: "UnderStud",
+      description:
+        "A student-support platform for school counselors (Guru BK) and homeroom teachers, built for the Joints X Inspire 2026 hackathon. Students can send anonymous reports without creating an account, while counselors triage them through a pin/draft/skip queue. Includes early-detection checklists with red flags, E-Rapor Excel import, and AI-assisted student profile summaries — designed as decision support, never automated diagnosis.",
+      tech: ["Go", "React", "TypeScript", "PostgreSQL", "Tailwind CSS"],
+      image: "/images/portfolio_understud.webp",
+      url: "https://understud.fazrilsh.com",
+    },
   ].reverse();
 
   return (
