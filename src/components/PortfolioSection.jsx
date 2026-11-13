@@ -168,6 +168,15 @@ const PortfolioSection = () => {
       image: "/images/portfolio_understud.webp",
       url: "https://understud.fazrilsh.com",
     },
+    {
+      id: 17,
+      title: "Cegah Karhutla",
+      description:
+        "An interactive wildfire monitoring web application for Indonesia, built for the Web In Action (WIA) MIA 2026 competition. It transforms satellite and meteorological data into intuitive visual layers: real-time hotspot heatmaps aggregated from NASA FIRMS, wind-driven smoke dispersion simulations, provincial air quality (AQI and PM2.5), a 7-week timeline slider, visual burned-area comparisons, and nearest medical shelter routing. Built with React and TypeScript using a persistent MapLibre GL canvas across routes, operating entirely on the client side with local snapshot fallbacks.",
+      tech: ["React", "TypeScript", "Tailwind CSS", "MapLibre GL JS", "NASA FIRMS"],
+      image: "/images/portfolio_cegah-karhutla.webp",
+      url: "https://fzrilsh.github.io/cegah-karhutla/",
+    },
   ].reverse();
 
   return (
